@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace all five low-resolution homepage project images with the exact 1456×1092 PNG originals supplied by the user.
+**Goal:** Replace all five low-resolution homepage project images with the exact 1448×1086 PNG originals supplied by the user.
 
 **Architecture:** Store one canonical PNG per project under `assets/projects/` and reference it directly from both the thumbnail and full-image link in `index.html`. Remove the superseded SVG/WebP assets and the incomplete base64 reconstruction workflows so no automated process can restore stale images.
 
@@ -26,7 +26,7 @@ Run PowerShell `Expand-Archive` against the exact ZIP path and a temporary direc
 
 - [ ] **Step 2: Verify all source files before installing them**
 
-Run a PowerShell image check using `System.Drawing.Image.FromFile`. Expected: each mapped file reports width `1456`, height `1092`, and PNG format.
+Run a PowerShell image check using `System.Drawing.Image.FromFile`. Expected: each mapped file reports width `1448`, height `1086`, and PNG format.
 
 - [ ] **Step 3: Copy each file to its canonical project path**
 
@@ -74,7 +74,7 @@ Run `rg -o "assets/projects/(pace|masksource|bonevibauth|voice-defense|arc-solve
 
 - [ ] **Step 2: Check local targets and image dimensions**
 
-Parse every local `assets/projects/...` reference from `index.html`, confirm the target exists, and use `System.Drawing` to confirm all five project images are 1456×1092.
+Parse every local `assets/projects/...` reference from `index.html`, confirm the target exists, and use `System.Drawing` to confirm all five project images are 1448×1086.
 
 - [ ] **Step 3: Check for stale image references and repository state**
 

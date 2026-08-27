@@ -18,4 +18,4 @@ Copy the PNG files without recompression. Update both thumbnail `src` values and
 
 ## Verification
 
-Confirm that every PNG is valid, has the expected 4:3 dimensions, and is referenced exactly twice in `index.html`. Check that no project image reference points to the obsolete SVG or WebP assets and that all referenced local files exist.
+Confirm that every PNG is valid, has the source package's 1448×1086 (4:3) dimensions, and is referenced exactly twice in `index.html`. Check that no project image reference points to the obsolete SVG or WebP assets and that all referenced local files exist.
